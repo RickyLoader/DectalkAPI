@@ -5,8 +5,8 @@ use \Psr\Http\Message\ResponseInterface as Response;
 $app->get('/api/say/{tts}',function(Request $request, Response $response){
     $tts = $request->getAttribute('tts');
     $command = "say.exe -w tts.wav "."\"[:phoneme on]\" "."\"".$tts."\"";
-    shell_exec("cd ../dectalk && ".$command);
-    $file = "../dectalk/tts.wav";
+    shell_exec("cd ../dectalk-software && ".$command);
+    $file = "../dectalk-software/tts.wav";
     downloadFile($file);
 });
 
