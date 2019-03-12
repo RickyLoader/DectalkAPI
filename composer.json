@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ramcoelho/slim-skeleton": "^3.1"
+    }
+}
